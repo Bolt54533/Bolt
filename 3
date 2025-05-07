@@ -1,0 +1,43 @@
+<p>&nbsp;&nbsp;</p><div id="congratulations" style="background-color: #ffffcc; border-radius: 10px; box-shadow: rgba(0, 0, 0, 0.2) 0px 0px 10px; margin-top: 100px; opacity: 0; padding: 20px; position: relative; text-align: center; transform: scale(0); transition: 1s;">
+  <span id="confetti-container" style="font-size: 30px; left: 50%; position: absolute; top: -30px; transform: translateX(-50%);">
+    <span style="position: relative;">🎊</span>
+    <span style="margin-left: 20px; position: relative;">🎊</span>
+  </span>
+  <h1 style="color: #33cc33; text-shadow: rgb(51, 204, 51) 0px 0px 10px, rgb(51, 204, 51) 0px 0px 20px, rgb(51, 204, 51) 0px 0px 30px;">Congratulations!</h1>
+</div>
+
+<style>
+  #congratulations {
+    animation: bloom 2s forwards;
+  }
+
+  @keyframes bloom {
+    0% {
+      opacity: 1;
+      transform: scale(0);
+    }
+    100% {
+      opacity: 1;
+      transform: scale(1);
+    }
+  }
+
+  .particle {
+    position: absolute;
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    background-color: #33cc33;
+    animation: fall 5s forwards;
+  }
+
+  @keyframes fall {
+    5% {
+      transform: translate(0, 0);
+    }
+    100% {
+      transform: translate(var(--x), var(--y));
+      opacity: 0;
+    }
+  }
+</style><br /><p></p>
