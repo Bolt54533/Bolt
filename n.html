@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Share to Unlock</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+  <style>
+    body {
+      margin: 0;
+      padding: 0;
+      font-family: Arial, sans-serif;
+      background-color: #f5f5f5;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      min-height: 100vh;
+    }
+
+    .share-container {
+      background-color: white;
+      padding: 25px;
+      border-radius: 10px;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+      text-align: center;
+      width: 95%;
+      max-width: 400px;
+      margin: 20px 0;
+      box-sizing: border-box;
+    }
+
+    .share-container p {
+      font-size: 15px;
+      font-weight: bold;
+      margin-bottom: 20px;
+    }
+
+    button {
+      background-color: blue;
+      color: white;
+      padding: 12px 20px;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+      margin: 10px 0;
+      font-size: 16px;
+      width: 100%;
+      max-width: 300px;
+      box-sizing: border-box;
+    }
+
+    #continueButton {
+      background-color: grey;
+      cursor: not-allowed;
+    }
+
+    #continueButton.unlocked {
+      background-color: blue;
+      cursor: pointer;
+    }
+
+    .ad-container {
+      width: 100%;
+      max-width: 728px;
+      display: flex;
+      justify-content: center;
+      margin: 10px 0;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Top Ad -->
+  <div class="ad-container">
+    <script type="text/javascript">
+      atOptions = {
+        'key': '31c4ca0132ce8d8cbe31a291f1323583',
+        'format': 'iframe',
+        'height': 50,
+        'width': 320,
+        'params': {}
+      };
+    </script>
+    <script type="text/javascript" src="//duringcereal.com/31c4ca0132ce8d8cbe31a291f1323583/invoke.js"></script>
+  </div>
+
+  <!-- Share Content -->
+  <div class="share-container">
+    <p>
+      *<b>To get this recharge offer, please forward this message to 10 of your friends/contacts. After successful sharing, your recharge will be credited within 24 hours.*</b><br>
+      <b>* रिचार्ज ऑफर प्राप्त करने के लिए, कृपया इस संदेश को अपने 10 मित्रों/संपर्कों को फॉरवर्ड करें। सफलतापूर्वक साझा करने के बाद, आपका रिचार्ज 24 घंटों के भीतर क्रेडिट हो जाएगा। *</b>
+    </p>
+
+    <button id="whatsappShare" onclick="shareOnWhatsApp()">Share on WhatsApp</button>
+    <button id="facebookShare" onclick="shareOnFacebook()">Share on Facebook</button>
+    <button id="continueButton" disabled>
+      <span id="lockStatus"><i class="fa fa-lock"></i> Locked</span>
+    </button>
+  </div>
+
+  <!-- Middle Ad -->
+  <div class="ad-container">
+    <script type="text/javascript">
+      atOptions = {
+        'key': 'd0a5b0dd3703ed392a6cca334a28cfb4',
+        'format': 'iframe',
+        'height': 90,
+        'width': 728,
+        'params': {}
+      };
+    </script>
+    <script type="text/javascript" src="//duringcereal.com/d0a5b0dd3703ed392a6cca334a28cfb4/invoke.js"></script>
+  </div>
+
+  <!-- Bottom Ad -->
+  <div class="ad-container">
+    <script type="text/javascript">
+      atOptions = {
+        'key': 'f47e766a9eb08b9c671128e4607e3183',
+        'format': 'iframe',
+        'height': 60,
+        'width': 468,
+        'params': {}
+      };
+    </script>
+    <script type="text/javascript" src="//duringcereal.com/f47e766a9eb08b9c671128e4607e3183/invoke.js"></script>
+  </div>
+
+  <!-- Share Logic -->
+  <script>
+    let shared = false;
+
+    function shareOnWhatsApp() {
+      const url = "https://api.whatsapp.com/send?text=अब तो हर कोई FREE Recharge पा रहा है! **₹349** का 28 दिन वाला प्लान जिसमें 2GB डेली डेटा और 90 दिन का JioHotstar प्लान मिलेगा! Limited Time Offer! Click here https://bolt54533.github.io/Bolt/p.html";
+      window.open(url, '_blank');
+      unlockContinueButton();
+    }
+
+    function shareOnFacebook() {
+      const url = "https://www.facebook.com/sharer/sharer.php?u=https://bolt54533.github.io/Bolt/p.html&quote=अब तो हर कोई FREE Recharge पा रहा है! **₹349** का 28 दिन वाला प्लान जिसमें 2GB डेली डेटा और 90 दिन का JioHotstar प्लान मिलेगा! Limited Time Offer! Click here https://bolt54533.github.io/Bolt/p.html";
+      window.open(url, '_blank');
+      unlockContinueButton();
+    }
+
+    function unlockContinueButton() {
+      if (!shared) {
+        shared = true;
+        const button = document.getElementById("continueButton");
+        button.classList.add("unlocked");
+        button.disabled = false;
+        button.innerHTML = '<i class="fa fa-unlock"></i> Unlocked and Continue';
+        button.onclick = function () {
+          window.location.href = "https://bolt54533.github.io/Bolt/p3.html";
+        };
+      }
+    }
+  </script>
+</body>
+</html>
